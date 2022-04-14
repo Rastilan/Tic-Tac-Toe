@@ -1,0 +1,10 @@
+.game-board{
+    display:grid;
+    grid-template-columns: repeat(3, 30vh);
+    grid-template-rows: repeat(3, 30vh);
+    gap:20px;
+}
+.game-space {
+
+    
+}
