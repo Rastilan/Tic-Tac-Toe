@@ -7,6 +7,9 @@ function GameSpaceBuilder() {
         const newDiv = document.createElement("div");
         newDiv.setAttribute("id", i);
         newDiv.setAttribute("onClick", "GameSpaceClicked(this.id)");
+        newDiv.setAttribute("onmouseover", "GameSpaceMouseOver(this.id)");
+        newDiv.setAttribute("onmouseout", "GameSpaceMouseOut(this.id)");
+        newDiv.setAttribute("class", "game-space");
         const currentDiv = document.getElementById("game-board");
         currentDiv.insertAdjacentElement('beforeend', newDiv);
 
@@ -24,7 +27,33 @@ const player2 = player('player2', 0);
 // CONTROLS
 
 const GameSpaceClicked = (id) => {
-    let spaceNum = id;
-    const test = console.log(spaceNum);
+    const currentDiv = document.getElementById(id);
+    if(currentDiv.getElementsByClassName == "player-selected"){
+        console.log("Already Selected!");
+    }
+    else {
+        currentDiv.classList.add("player-selected");
+    }
 }
 
+const GameSpaceMouseOver = (id) => {
+    const currentDiv = document.getElementById(id);
+    if(currentDiv.classList.contains == "player-selected"){
+        console.log("Already Selected!");
+    }
+    else {
+        currentDiv.innerHTML = "X";
+    }
+    
+
+}
+const GameSpaceMouseOut = (id) => {
+    const currentDiv = document.getElementById(id);
+    if(currentDiv.classList.contains == "player-selected"){
+        console.log("Already Selected!");
+    }
+    else {
+        currentDiv.innerHTML = "";
+    }
+
+}
