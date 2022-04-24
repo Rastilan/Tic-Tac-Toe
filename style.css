@@ -1,3 +1,11 @@
+div{
+    font-size: 30vh;
+    text-align: center;
+
+    color: #000; 
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .game-board{
     display:grid;
     grid-template-columns: repeat(3, 30vh);
@@ -9,7 +17,9 @@
     
 }
 .player-selected {
-    
+    font-size: 30vh;
+    text-align: center;
+    color: #000; 
 }
 .game-space:nth-child(-n+3){
     border-top: 0px;
